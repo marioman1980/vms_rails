@@ -1,6 +1,55 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Site wide styles */
+
+body {
+	padding-top: 60px;
+	font-family: 'Oswald', sans-serif;
+	color: #111
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+.jumbotron {
+	background-color: transparent;
+	h1 {
+		font-size: 3em;
+	};
+	h2 {
+		font-size: 2em
+	};
+	.btn {
+		margin-top: 10px;
+		background-color: #333;
+		color: #fff;
+		padding: 12px;
+		font-size: 20px;
+		border-radius: 0;
+		border: none;
+		&:hover {
+			background-color: #555
+		}		
+	}
+}
+
+//#lovely-button {
+//	background-color: #333;
+//	color: #fff;
+//	padding: 12px;
+//	font-size: 20px;
+//	border-radius: 0;
+//	border: none;
+//	&:hover {
+//		background-color: #555
+//	}
+//}
+
+
 /* header */
 
 #logo {
@@ -14,4 +63,51 @@
 	position: absolute;
 	bottom: 0;
 	right: 50px
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/* Parallax */
+
+.parallax { 
+	/* The image used */
+	background: image-url("online_payment.jpg");
+
+	/* Set a specific height */
+	height: 500px; 
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
