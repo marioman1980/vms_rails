@@ -26,8 +26,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .jumbotron {
 	background-color: transparent;
+	color: #fff;
+	text-shadow: 2px 2px 8px #000;	
 	h1 {
-		font-size: 3em;
+		font-size: 3em
 	};
 	h2 {
 		font-size: 2em
