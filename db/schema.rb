@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170609092107) do
+ActiveRecord::Schema.define(version: 20170609094245) do
 
   create_table "users", force: :cascade do |t|
     t.string "user_forename", limit: 35
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170609092107) do
     t.string "api_pk", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
     t.index [nil], name: "index_users_on_email", unique: true
   end
 

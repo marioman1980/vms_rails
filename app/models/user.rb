@@ -8,6 +8,11 @@ class User < ApplicationRecord
 	validates :api_sk, presence: true, length: {maximum: 50}	
 	validates :api_pk, presence: true, length: {maximum: 50}	
 	
+	
+	has_secure_password
+	validates :password, presence: true, length: { minimum: 8 }
+	
 # validates_format_of :user_forename, :with => /\A[a-z]+\z/i
 #	validates_format_of :user_surname, :with => /\A[a-z]+\z/i	
+	
 end
