@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-	VALID_NAME_REGEX = /\A[a-z]+\z/i
+	VALID_NAME_REGEX = /\A[a-zA-Z-]+\z/i
 	validates :user_forename, presence: true, length: {maximum: 35}, format: {with: VALID_NAME_REGEX}
 	validates :user_surname, presence: true, length: {maximum: 35}, format: {with: VALID_NAME_REGEX}
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i

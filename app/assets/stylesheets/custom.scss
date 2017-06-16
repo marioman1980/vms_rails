@@ -1,12 +1,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Mixins, variables, etc */
+
+$nearly-black: #111;
+$darker-grey: #333;
+$mid-grey: #555;
+$grey-black: #222;
+$lightish-grey: #777;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}	
+
 /* Site wide styles */
 
 body {
 	padding-top: 60px;
 	font-family: 'Oswald', sans-serif;
-	color: #111
+	color: $nearly-black
 }
 
 body, html {
@@ -30,8 +44,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .jumbotron {
 	background-color: transparent;
-	color: #fff;
-	text-shadow: 2px 2px 8px #000;	
+	color: white;
+	text-shadow: 2px 2px 8px black;	
 	h1 {
 		font-size: 3em
 	};
@@ -40,14 +54,14 @@ h1, h2, h3, h4, h5, h6 {
 	};
 	.btn {
 		margin-top: 10px;
-		background-color: #333;
-		color: #fff;
+		background-color: $darker-grey;
+		color: white;
 		padding: 12px;
 		font-size: 20px;
 		border-radius: 0;
 		border: none;
 		&:hover {
-			background-color: #555
+			background-color: $mid-grey
 		}		
 	}
 }
@@ -78,15 +92,15 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #777;
+  color: $lightish-grey;
 }
 
 footer a {
-  color: #555;
+  color: $mid-grey;
 }
 
 footer a:hover {
-  color: #222;
+  color: $grey-black;
 }
 
 footer small {
@@ -130,3 +144,17 @@ footer ul li {
 		font-weight: bold
 	}
 }
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing
+}
+
+input {
+  height: auto !important;
+}
+

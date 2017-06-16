@@ -1,5 +1,42 @@
-<% provide(:title, 'Sign Up') %>
+<% provide(:title, 'Register') %>
 <div class="container">
-	<h1>Users#new</h1>
-	<p>Find me in app/views/users/new.html.erb</p>
+	<h1>Register</h1>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= form_for(@user) do |f| %>
+				<%= f.label 'Forename' %>
+				<%= f.text_field :user_forename %>
+			
+				<%= f.label 'Surname' %>
+				<%= f.text_field :user_surname %>			
+
+				<%= f.label 'Email' %>
+				<%= f.email_field :user_email %>
+			
+				<%= f.label :company %>
+				<%= f.text_field :company %>
+			
+				<%= f.label :username %>
+				<%= f.text_field :username %>		
+
+				<%= f.label 'Logo URL' %>
+				<%= f.email_field :logo_url %>
+			
+				<%= f.label 'Secret API Key' %>
+				<%= f.text_field :api_sk %>
+			
+				<%= f.label 'Public API Key' %>
+				<%= f.text_field :api_pk %>					
+
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+
+				<%= f.label :password_confirmation, "Confirmation" %>
+				<%= f.password_field :password_confirmation %>
+
+				<%= f.submit "Create my account", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>	
 </div>
